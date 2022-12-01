@@ -1,3 +1,5 @@
+import 'package:flutter/cupertino.dart';
+
 import '../model/model.dart';
 
 //Estados ****************************
@@ -16,5 +18,10 @@ class ErroAuBuscarCep extends TreeState {}
 
 //Eventos ***************************************************
 abstract class TreeEvets {}
+
+class EntradaDoCep extends TreeEvets {
+  final String text;
+  EntradaDoCep({required this.text});
+}
 
 class Buscarpelocep extends TreeEvets {}

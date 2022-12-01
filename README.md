@@ -1,23 +1,14 @@
-# buscar_cep
+# buscar_cep [1.0]
+    - A new Flutter project.
+    - usando bloc e http
 
-A new Flutter project.
-usando bloc e http
-
-
-
+## integração com o campo de texto[1.0]
+    - a busca agora pode passar um cep dinamicamente
+## integração com o botão criada[0.8]
+    - bloc gerenciando os estados da aplicação no botão 
+## chamda http criada [0.7]
+    - chamada http esta dentro do cubit
 ## bloc criado [0.6]
 
 ## tela criada [0.5]
- - a tela principa
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+    - a tela principa

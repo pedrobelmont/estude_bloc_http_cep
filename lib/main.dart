@@ -8,10 +8,7 @@ import 'package:provider/provider.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MultiProvider(
-    providers: [],
-    child: const MyApp(),
-  ));
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -36,6 +33,7 @@ class BlocHomePage extends StatelessWidget {
 }
 
 class InicialPage extends StatelessWidget {
+  var myController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -52,6 +50,7 @@ class InicialPage extends StatelessWidget {
               child: Column(
                 children: [
                   TextFormField(
+                    controller: myController,
                     decoration: const InputDecoration(
                         icon: Icon(Icons.add_location),
                         labelText: 'digite seu cep'),
@@ -62,6 +61,9 @@ class InicialPage extends StatelessWidget {
                     child: ElevatedButton(
                       child: Icon(Icons.adjust),
                       onPressed: () {
+                        context
+                            .read<ApiCubit>()
+                            .add(EntradaDoCep(text: myController.text));
                         context.read<ApiCubit>().add(Buscarpelocep());
                       },
                     ),
